@@ -10,5 +10,7 @@ Output of the class:
 1) Basics of python including data types, keywords, built-in functions, identifiers, methods, function etc
 2) Advanced of python including statements, file handling etc
 3) Solving problem on certain questions that related with python
-4) Tips and trick to get used with python
-5) and many more
+4) Built-in libraries and third parties libraries
+5) Exception handling
+6) File handling
+7) Tips and trick to get used with python
