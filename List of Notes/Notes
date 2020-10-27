@@ -1,0 +1,289 @@
+Keywords are case sensitive, reserved words of python
+List of keywords that cannot be used as Variable/function, if use it, will show error
+
+False       class       finally     is          return
+None        continue    for         lambda      try
+True        def         from        nonlocal    while
+and         del         global      not         with
+as          elif        if          or          yield
+assert      else        import      pass
+break       except      in          raise
+
+--------------------------------------------------------------------------------------
+
+IDENTIFIERS
+names given to functions, variables, class
+Can be combination of (a-z), (A-Z), (0-9) and underscore (_)
+
+# valid
+variable_1 = 10
+
+# invalid - cannot start with numbers, contain special characters/reserved keywords
+1variable = 10
+variable% = 10
+True = 10
+
+---------------------------------------------------------------------------------------
+
+VARIABLES
+used to store information, can be used acrros the program, can be changed accross the program
+
+---------------------------------------------------------------------------------------
+
+RULES TO UNDERSTANDING CODE
+1. Try to write identifier with length greater than 5
+2. Never write single or double characters as identifiers
+3. Use underscore if it long identifier
+4. Use CamelCase whenver necessary
+5. Don't use temp, tmp variables until it is really temporary variable
+
+----------------------------------------------------------------------------------------
+
+COMMENT MULTIPLE LINES
+'''
+value1 = 20
+'''
+
+COMMENT 1 LINE
+# this is comment
+
+----------------------------------------------------------------------------------------
+
+Methods
+1. object specific
+2. Every object has its own different methods
+3. string methods are different, list methods are different etc..
+4. Methods are accessible with . operator
+
+Functions
+1. Common for all objects
+2. print(), len(), type(), isinstance(), range(), min(), max(), sum(), id() etc..
+3. To display all available function,  In console type dir(__builtins__)
+
+p/s: mostly if the method or functions is start with is... usually will return true or false
+
+----------------------------------------------------------------------------------------
+
+Conditional Statements
+1) if
+2) if-else
+3) if-elif-elif ... else
+
+Control Statements
+1) for
+2) while
+
+Jumpy Statements
+1) break
+2) continue
+
+----------------------------------------------------------------------------------------
+
+File handling
+1. Flat files (csv, log, conf, tsv, .properties)
+2. Third party files ( all other files like .docx/doc, mp4, mp3 that are opened with some third party library)
+
+OPENING THE FILE
+syntax  :   fobj = open(filename, mode)
+example :   fobj = open("abc.txt", "r")     # read mode
+
+            fobj = open("abc.txt", "w")     # write mode
+            case1   : If the file is not exist, file will be created first
+            case2   : If the file exist, it will overwrites file content completely
+
+            fobj = open("abc.txt", "a")     # append mode
+            case1   : If the file is not exist, file will be created first
+            case2   : If the file exist, it will appends the data to the file
+
+WAY TO WRITE LOCATION OF THE FILE
+fobj = open("D:\\material\\pythoncode\\customers.txt","w")
+fobj = open(r"D:\material\pythoncode\customers.txt","w")    # raw string
+fobj = open("D:/material/pythoncode/customers.txt","w")
+
+# if does not close the file, any changes/code made will not be put into the file
+CLOSING THE FILE
+fobj.close()
+
+----------------------------------------------------------------------------------------
+
+Read operation
+1) reading with file object
+2) fobj.readlines()
+3) fobj.read()      # not generally suggested as it opens the file at a time, but best way to read small config files
+4) using csv library
+5) using pandas library
+
+----------------------------------------------------------------------------------------
+
+Exception Handling
+1) Syntax errors
+2) Semantic errors
+
+Handling the error in the runtime is known as exception handling
+
+Keywords
+1) try      (mandatory)
+2) except   (mandatory)
+3) else     (optional)
+4) finally  (optional)
+5) raise    (optional)
+
+----------------------------------------------------------------------------------------
+
+Libraries
+1) Builtin libraries
+    - generally used by everyone
+    - installed with python by default
+    - in general, anaconda contains 8000+ builtin libraries
+
+2) Third party libraries
+    - Depending on requirements (db programming, excel programming,
+      cloud connectivity, network programming, web development, machine learning)
+    - All 3rd party libraries available at pypi.org OR using easy_install
+
+----------------------------------------------------------------------------------------
+
+WAYS TO IMPORT LIBRARIES
+1) import libraries
+
+# all methods will be imported
+import math
+print(math.tan(2))
+
+2) import required methods only
+from math import tan
+print(tan(2))
+
+3) import with alias name
+import math as m
+print(m.log(3))
+
+----------------------------------------------------------------------------------------
+
+COMMON LIBRARIES
+
+os     : os level operations( create directories | remove | list files | remove file | change file permissions)
+sys           : system config information
+shutil        : copy, move , rmtree
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings|patterns
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+----------------------------------------------------------------------------------------
+
+FREQUENTLY USED THIRD PARTY LIBRARIES  ( from pypi.org )
+
+Database Related
+1) pymysql
+2) cx_Oracle
+3) pymongo
+4) pymssql
+
+Web Frameworks (Developing web applications)
+1) django
+2) flask
+3) bottom
+
+ruby on rails
+
+Analytics/Machine learning
+1) numpy
+2) scipy
+3) pandas ( processing|data cleaning)
+4) seaborn
+5) plotly
+6) ggplot
+7) matplotlib   : visualizing data .. bar graph.. pie graph
+8) scikit-learn :  machine learning algorithms
+
+Image Processing
+1) pillow
+2) opencv
+
+APIs ( REST API)
+1) requests
+
+Excel Programming
+1) openpyxl    : reading/write excel files
+2) xlsxwriter  : writing to excel file
+3) python-docx : working with ms-word
+
+Networking
+1) paramiko   :  interacting with remote servers
+2) netmiko    :  connecting to router/switch
+3) pysftp     :
+4) ftplib     :
+5) pyping     :  ping any host or ip address
+6) os.system():
+subprocess.
+
+Cloud
+1) boto3        (amazon aws)
+2) azure        (microsoft azure)
+3) oci          (oracle cloud)
+4) gcp          (google cloud)
+
+----------------------------------------------------------------------------------------
+
+CREATE DATABASE
+create database information;
+
+DISPLAY ALL EXISTING DATABASE
+show information;
+
+ACCESS DATABASE
+use information;
+
+DISPLAY ALL EXISTING TABLES
+show tables;
+
+CREATE TABLE
+create table realestate(street varchar(200), city varchar(200));
+
+INSER RECORDS
+insert into realestate values('Jalan TAR', 'Kuala Lumpur');
+insert into realestate values('Hulu Langat', 'Cheras');
+
+DISPLAY ALL RECORDS
+select * from realestate;
+
+----------------------------------------------------------------------------------------
+
+Steps involved in connecting to database
+1) connecting to database
+2) prepare query
+3) execute query
+4) fetch data
+5) close
+
+----------------------------------------------------------------------------------------
