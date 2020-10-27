@@ -8,9 +8,6 @@ It is being held weekdays from 8th September 2020 to 18th September 2020 with th
     
 Output of the class:    
 1) Basics of python including data types, keywords, built-in functions, identifiers, methods, function etc
-2) Advanced of python including statements, file handling etc
+2) Advanced of python including statements, file and exception handling, function, libraries, database etc
 3) Solving problem on certain questions that related with python
-4) Built-in libraries and third parties libraries
-5) Exception handling
-6) File handling
-7) Tips and trick to get used with python
+5) Tips and trick to get used with python
